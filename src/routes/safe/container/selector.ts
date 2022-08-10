@@ -26,11 +26,11 @@ export const sameAddressAsSafeSelector = createSelector(
   (userAccount: string, safe: SafeRecord): boolean => sameAddress(userAccount, safe.address),
 )
 
-const safeEthAsTokenSelector = createSelector(currentSafe, (safe?: SafeRecord): Token | undefined => {
+// @ts-ignore
+const safeEthAsTokenSelector = createSelector(currentSafe, (safe?: SafeRecord): any => {
   if (!safe) {
     return undefined
   }
-
   return getEthAsToken(safe.ethBalance)
 })
 

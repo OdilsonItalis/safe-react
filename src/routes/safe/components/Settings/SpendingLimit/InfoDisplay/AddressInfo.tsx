@@ -18,7 +18,7 @@ interface AddressInfoProps {
 }
 
 const AddressInfo = ({ address, title, name, logoUri, color }: AddressInfoProps): ReactElement => {
-  const addessBookName = useSelector((state) => addressBookEntryName(state, { address }))
+  const addessBookName = useSelector((state: any) => addressBookEntryName(state, { address }))
 
   return (
     <>

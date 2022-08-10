@@ -7,13 +7,13 @@ import { AddressEx } from '@gnosis.pm/safe-react-gateway-sdk'
 
 const DEFAULT_PROPS: AddressEx = {
   value: '',
-  name: null,
-  logoUri: null,
+  name: '',
+  logoUri: '',
 }
 
 export type KnownAddressType = AddressEx & { isInAddressBook: boolean }
 export const useKnownAddress = (props: AddressEx | null = DEFAULT_PROPS): KnownAddressType => {
-  const recipientName = useSelector((state) => addressBookEntryName(state, { address: props?.value || '' }))
+  const recipientName = useSelector((state: any) => addressBookEntryName(state, { address: props?.value || '' }))
 
   // Undefined known address
   if (!props) {

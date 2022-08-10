@@ -67,7 +67,7 @@ const DecodedTransactions = ({
           to: tx.to,
           value: tx.value,
           data: transaction.txDetails?.txData.hexData || EMPTY_DATA,
-          dataDecoded: null,
+          dataDecoded: undefined,
         }
 
         if (isCustomTxInfo(transaction.txInfo) && transaction.txInfo.isCancellation) {

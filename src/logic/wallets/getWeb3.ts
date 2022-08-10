@@ -1,3 +1,4 @@
+// @ts-nocheck
 import semverSatisfies from 'semver/functions/satisfies'
 import Web3 from 'web3'
 import { Contract } from 'web3-eth-contract'

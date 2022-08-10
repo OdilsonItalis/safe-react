@@ -78,6 +78,7 @@ const PairingDetails = ({ vertical = false }: PairingDetailsProps): ReactElement
   const qr = (
     <StyledQr>
       {uri ? (
+        // @ts-ignore
         <QRCode value={uri} includeMargin imageSettings={{ src: SafeLogo, width: 30, height: 30 }} />
       ) : isPairingLoaded ? (
         <Skeleton variant="rect" width={QR_DIMENSION} height={QR_DIMENSION} />

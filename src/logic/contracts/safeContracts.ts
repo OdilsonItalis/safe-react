@@ -7,7 +7,7 @@ import {
   getMultiSendCallOnlyDeployment,
   getSignMessageLibDeployment,
   SingletonDeployment,
-} from '@gnosis.pm/safe-deployments'
+} from 'kcc-safe-deployments-sdk'
 import Web3 from 'web3'
 import { AbiItem } from 'web3-utils'
 
@@ -24,7 +24,7 @@ import { SignMessageLib } from 'src/types/contracts/sign_message_lib.d'
 import { MultiSend } from 'src/types/contracts/multi_send.d'
 import { getSafeInfo } from 'src/logic/safe/utils/safeInformation'
 import { NonPayableTransactionObject } from 'src/types/contracts/types'
-import { getMultiSendDeployment } from '@gnosis.pm/safe-deployments/dist/libs'
+import { getMultiSendDeployment } from 'kcc-safe-deployments-sdk/dist/libs'
 import { MultiSendCallOnly } from 'src/types/contracts/multi_send_call_only'
 
 export const SENTINEL_ADDRESS = '0x0000000000000000000000000000000000000001'

@@ -52,7 +52,7 @@ export const EllipsisTransactionDetails = ({
 
   const isOwnerConnected = useSelector(grantedSelector)
 
-  const recipientName = useSelector((state) => addressBookEntryName(state, { address }))
+  const recipientName = useSelector((state: any) => addressBookEntryName(state, { address }))
   // We have to check that the name returned is not UNKNOWN
   const isStoredInAddressBook = !sameString(recipientName, ADDRESS_BOOK_DEFAULT_NAME)
 

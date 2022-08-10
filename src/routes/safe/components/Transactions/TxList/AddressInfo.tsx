@@ -16,7 +16,7 @@ type Props = EthHashInfoRestProps & {
 }
 
 export const AddressInfo = ({ address, name, avatarUrl, ...rest }: Props): ReactElement | null => {
-  const toInfo = useKnownAddress({ value: address, name: name || null, logoUri: avatarUrl || null })
+  const toInfo = useKnownAddress({ value: address, name: name || undefined, logoUri: avatarUrl || undefined })
 
   if (address === '') {
     return null

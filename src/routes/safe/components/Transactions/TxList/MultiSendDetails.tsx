@@ -1,5 +1,5 @@
 import { AccordionSummary, IconText, Text } from '@gnosis.pm/safe-react-components'
-import { DataDecoded, Operation, TransactionData } from '@gnosis.pm/safe-react-gateway-sdk'
+import { Operation, TransactionData } from '@gnosis.pm/safe-react-gateway-sdk'
 import { ReactElement, ReactNode } from 'react'
 import styled from 'styled-components'
 
@@ -27,7 +27,7 @@ type MultiSendTxGroupProps = {
     address: string
     name?: string | undefined
     avatarUrl?: string | undefined
-    dataDecoded: DataDecoded | null
+    dataDecoded: any
     operation: Operation
   }
 }

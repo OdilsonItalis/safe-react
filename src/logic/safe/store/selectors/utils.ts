@@ -10,4 +10,5 @@ export const createIsEqualSelector = createSelectorCreator(defaultMemoize, isEqu
 const hashFn = (gatewayTransactions: AppReduxState['gatewayTransactions'], safeAddress: string): string =>
   hash(gatewayTransactions[safeAddress] ?? {})
 
+// @ts-ignore
 export const createHashBasedSelector = createSelectorCreator(memoize as any, hashFn)

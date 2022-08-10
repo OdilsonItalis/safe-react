@@ -1,7 +1,6 @@
 import { useEffect, useState, Fragment } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { useDispatch, useSelector } from 'react-redux'
-
 import { getExplorerInfo, getNativeCurrency } from 'src/config'
 import { toTokenUnit } from 'src/logic/tokens/utils/humanReadableValue'
 import Block from 'src/components/layout/Block'
@@ -51,7 +50,9 @@ const ContractInteractionReview = ({ onClose, onPrev, tx }: Props): React.ReactE
   const dispatch = useDispatch()
   const { safeAddress } = useSafeAddress()
   const nativeCurrency = getNativeCurrency()
-  const addressName = useSelector((state) => addressBookEntryName(state, { address: tx.contractAddress as string }))
+  const addressName = useSelector((state: any) =>
+    addressBookEntryName(state, { address: tx.contractAddress as string }),
+  )
 
   const [txInfo, setTxInfo] = useState<{
     txRecipient: string

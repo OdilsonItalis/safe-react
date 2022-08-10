@@ -140,12 +140,14 @@ export const TxOwners = ({
 }): ReactElement | null => {
   const { txInfo, detailedExecutionInfo } = txDetails
 
-  const [hideConfirmations, setHideConfirmations] = useState<boolean>(shouldHideConfirmations(detailedExecutionInfo))
+  const [hideConfirmations, setHideConfirmations] = useState<boolean>(
+    shouldHideConfirmations(detailedExecutionInfo as any),
+  )
 
   const { threshold } = useSelector(currentSafe)
   const account = useSelector(userAccountSelector)
   const chainId = useSelector(currentChainId)
-  const name = useSelector((state) => addressBookName(state, { address: account, chainId }))
+  const name = useSelector((state: any) => addressBookName(state, { address: account, chainId }))
 
   const toggleHide = () => {
     setHideConfirmations((prev) => !prev)
@@ -183,7 +185,7 @@ export const TxOwners = ({
       </StyledStep>
       {!hideConfirmations &&
         (isImmediateExecution
-          ? getConfirmationStep({ value: account, name, logoUri: null })
+          ? getConfirmationStep({ value: account, name, logoUri: '' })
           : detailedExecutionInfo.confirmations.map(({ signer }) => getConfirmationStep(signer, signer.value)))}
       {detailedExecutionInfo.confirmations.length > 0 && (
         <StyledStep state="confirmed">

@@ -117,7 +117,7 @@ export const getTxTokenData = (txInfo: Transfer): txTokenData => {
       return {
         address: txInfo.transferInfo.tokenAddress,
         value: txInfo.transferInfo.value,
-        decimals: txInfo.transferInfo.decimals,
+        decimals: txInfo.transferInfo.decimals as any,
       }
     case TransactionTokenType.ERC721:
       return { address: txInfo.transferInfo.tokenAddress, value: '1', decimals: 0 }
@@ -256,7 +256,7 @@ export const makeTxFromDetails = (txDetails: TransactionDetails): Transaction =>
       return !hasConfirmed
     })
 
-    return missingSigners.length ? missingSigners : null
+    return missingSigners.length ? missingSigners : (null as any)
   }
 
   const getMultisigExecutionInfo = ({

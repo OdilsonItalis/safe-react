@@ -86,7 +86,7 @@ const SafeListItem = ({
   owners,
 }: Props): ReactElement => {
   const history = useHistory()
-  const safeName = useSelector((state) => addressBookName(state, { address, chainId: networkId }))
+  const safeName = useSelector((state: any) => addressBookName(state, { address, chainId: networkId }))
   const { safeAddress: currentSafeAddress } = useSafeAddress()
   const currChainId = useSelector(currentChainId)
   const isCurrentSafe = currChainId === networkId && sameAddress(currentSafeAddress, address)

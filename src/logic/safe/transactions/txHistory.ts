@@ -81,7 +81,7 @@ export const saveTxToHistory = async ({
     gasToken,
     refundReceiver,
     sender,
-    origin: origin ? origin : null,
+    origin: origin ? origin : (null as any),
     signature,
   })
   const txDetails = await proposeTransaction(_getChainId(), address, body)

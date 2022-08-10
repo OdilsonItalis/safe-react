@@ -91,7 +91,7 @@ const APP_LOAD_ERROR = 'There was an error loading the Safe App. There might be 
 const AppFrame = ({ appUrl }: Props): ReactElement => {
   const { address: safeAddress, ethBalance, owners, threshold } = useSelector(currentSafe)
   const { nativeCurrency, chainId, chainName, shortName, blockExplorerUriTemplate } = getChainInfo()
-  const safeName = useSelector((state) => addressBookEntryName(state, { address: safeAddress }))
+  const safeName = useSelector((state: any) => addressBookEntryName(state, { address: safeAddress }))
   const granted = useSelector(grantedSelector)
   const iframeRef = useRef<HTMLIFrameElement>(null)
   const [confirmTransactionModal, setConfirmTransactionModal] =

@@ -51,7 +51,7 @@ export type SafeRecordProps = {
 /**
  * Create a safe record defaulting to these values
  */
-const makeSafe = Record<SafeRecordProps>({
+const makeSafe = Record<any>({
   address: '',
   chainId: undefined,
   threshold: 0,

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Button, Switch } from '@gnosis.pm/safe-react-components'
 import IconButton from '@material-ui/core/IconButton'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
@@ -125,6 +126,7 @@ const ReceiveModal = ({ onClose, safeAddress, safeName }: Props): ReactElement =
             </>
           }
         />
+
         <Block className={classes.addressContainer} justify="center">
           <PrefixedEthHashInfo hash={safeAddress} showAvatar showCopyBtn explorerUrl={getExplorerInfo(safeAddress)} />
         </Block>
