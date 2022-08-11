@@ -70,6 +70,7 @@ const getSafeContractDeployment = ({ safeVersion }: { safeVersion: string }): Si
  */
 const getGnosisSafeContractInstance = (web3: Web3, chainId: ChainId): GnosisSafe => {
   const safeSingletonDeployment = getSafeContractDeployment({ safeVersion: LATEST_SAFE_VERSION })
+  console.log('safeSingletonDeployment', safeSingletonDeployment)
   const contractAddress = safeSingletonDeployment?.networkAddresses[chainId]
 
   if (!contractAddress) {
