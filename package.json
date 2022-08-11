@@ -48,14 +48,6 @@
       "prettier --write"
     ]
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.{.test.*}",
-      "!src/**/test/**/*",
-      "!src/**/assets/**"
-    ]
-  },
   "productName": "Safe",
   "resolutions": {
     "@babel/core": "^7.14.0",
