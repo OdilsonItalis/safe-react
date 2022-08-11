@@ -1,5 +1,5 @@
 import { FEATURES } from '@gnosis.pm/safe-react-gateway-sdk'
-import { Record, RecordOf } from 'immutable'
+import { Record } from 'immutable'
 import { ChainId } from 'src/config/chain.d'
 
 import { BalanceRecord } from 'src/logic/tokens/store/actions/fetchSafeTokens'
@@ -51,7 +51,7 @@ export type SafeRecordProps = {
 /**
  * Create a safe record defaulting to these values
  */
-const makeSafe = Record<any>({
+const makeSafe = Record({
   address: '',
   chainId: undefined,
   threshold: 0,
@@ -79,6 +79,6 @@ const makeSafe = Record<any>({
   txHistoryTag: '0',
 })
 
-export type SafeRecord = RecordOf<SafeRecordProps>
+export type SafeRecord = any
 
 export default makeSafe
