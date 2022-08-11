@@ -18,7 +18,7 @@
   "homepage": "/app",
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "build": "rescripts build",
+    "build": "rescripts --max-old-space-size=8192 build",
     "eject": "rescripts eject",
     "format:staged": "lint-staged",
     "generate-types": "yarn generate-types:spendingLimit && yarn generate-types:safeDeployments && yarn generate-types:erc20 && yarn generate-types:erc721",
@@ -105,7 +105,6 @@
     "lodash": "^4.17.21",
     "notistack": "1.0.10",
     "object-hash": "^2.1.1",
-    "protobufjs": "^7.0.0",
     "qrcode.react": "1.0.1",
     "query-string": "7.0.1",
     "react": "17.0.2",
